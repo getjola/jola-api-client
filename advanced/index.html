@@ -26,8 +26,10 @@
     		    <div class="card">
     		      <div class="card-body">
     		        <h5 class="card-title">Configure Request</h5>
-    		        <input id="URL" placeholder="URL">
-    		        <button onclick="send();">Send</button>
+    		        <form onsubmit="return false">
+                      <input id="URL" placeholder="URL" autofocus>
+    		          <button onclick="send()">Send</button>
+                    </form>
     		      </div>
     		    </div>
 
@@ -36,13 +38,16 @@
     		      <div class="card">
     		      <div class="card-body">
     		        <h5 class="card-title">Result</h5>
+                    <span>Response code: </span>
+                    <span id="status">
+                        Waiting
+                    </span>
     		        <div id="result">
     		        	No data to show!
-    		      </div>
+    		        </div>
     		    </div>
     		
     		   </div>
-            <br><a href="advanced/">Advanced</a>
     		</center>
 
 	</div>
